@@ -5,11 +5,11 @@ class Car {
     private boolean trunkFlap;
     private boolean runingEngine;
 
-    public static boolean E100 ;//= "100 - samochod udalo sie uruchomic ";
-    public static boolean E200 ;//= "200 - samochodu nie da się uruchomić z powodu awarii silnika";
-    public static boolean E300 ;//= "300 - samochodu nie da się uruchomić z powodu braku paliwa";
-    public static boolean E400 ;//= "400 - samochód udało się uruchomić, ale klapka wlewu paliwa nie jest zamknięta";
-    public static boolean E500 ;//= "500 - samochód udało się uruchomić, ale drzwi lub bagażnik nie są zamknięte";
+    public static String E100 = "E100";
+    public static String E200 = "E200";
+    public static String E300 = "E300";
+    public static String E400 = "E400";
+    public static String E500 = "E500";
 
     public Car(boolean fuelTank, boolean effEngine, boolean fuealFlap, boolean trunkFlap) {
         this.fuelTank = fuelTank;
