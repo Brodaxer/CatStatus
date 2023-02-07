@@ -58,5 +58,29 @@ class Car {
     public void setRuningEngine(boolean runingEngine) {
         this.runingEngine = runingEngine;
     }
+    public String Start() {
+        if (!getFuelTank()) {
+            return Car.E300;                   // nie da sie uruchomic
+        } else if (!isEffEngine()) {
+            return Car.E200;                    // nie da sie uruchomic
+        } else if (!isFuealFlap()) {
+            return Car.E400;
+        } else if (!isTrunkFlap()) {
+            return Car.E500;
+        } else return Car.E100;
+    }
+    public String Status() {
+        if (!getFuelTank()) {
+            return "Sprawdz poziom paliwa";
+        } else if (!isEffEngine()) {
+            return "Check engine";
+        } else if (!isFuealFlap()) {
+            return "Sprawdz wlew paliwa";
+        } else if (!isTrunkFlap()) {
+            return "Sprawdz klape bagaznika";
+        } else return "Wszystkie systemy sprawne, możesz wyruszyć w bezpieczną podróż";
+
+    }
 }
+
 
