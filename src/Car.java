@@ -19,33 +19,33 @@ class Car {
 
     }
 
-    public boolean getFuelTank() {
-        return fuelTank;
-    }
+//    public boolean getFuelTank() {
+//        return fuelTank;
+//    }
 
     public void setFuelTank(boolean fuelTank) {
         this.fuelTank = fuelTank;
     }
 
-    public boolean isEffEngine() {
-        return effEngine;
-    }
+//    public boolean isEffEngine() {
+//        return effEngine;
+//    }
 
     public void setEffEngine(boolean effEngine) {
         this.effEngine = effEngine;
     }
 
-    public boolean isFuealFlap() {
-        return fuealFlap;
-    }
+//    public boolean isFuealFlap() {
+//        return fuealFlap;
+//    }
 
     public void setFuealFlap(boolean fuealFlap) {
         this.fuealFlap = fuealFlap;
     }
 
-    public boolean isTrunkFlap() {
-        return trunkFlap;
-    }
+//    public boolean isTrunkFlap() {
+//        return trunkFlap;
+//    }
 
     public void setTrunkFlap(boolean trunkFlap) {
         this.trunkFlap = trunkFlap;
@@ -59,24 +59,24 @@ class Car {
         this.runingEngine = runingEngine;
     }
     public String Start() {
-        if (!getFuelTank()) {
+        if (!fuelTank) {
             return Car.E300;                   // nie da sie uruchomic
-        } else if (!isEffEngine()) {
+        } else if (!effEngine) {
             return Car.E200;                    // nie da sie uruchomic
-        } else if (!isFuealFlap()) {
+        } else if (!fuealFlap) {
             return Car.E400;
-        } else if (!isTrunkFlap()) {
+        } else if (!trunkFlap) {
             return Car.E500;
         } else return Car.E100;
     }
     public String Status() {
-        if (!getFuelTank()) {
+        if (!fuelTank) {
             return "Sprawdz poziom paliwa";
-        } else if (!isEffEngine()) {
+        } else if (!effEngine) {
             return "Check engine";
-        } else if (!isFuealFlap()) {
+        } else if (!fuealFlap) {
             return "Sprawdz wlew paliwa";
-        } else if (!isTrunkFlap()) {
+        } else if (!trunkFlap) {
             return "Sprawdz klape bagaznika";
         } else return "Wszystkie systemy sprawne, możesz wyruszyć w bezpieczną podróż";
 
